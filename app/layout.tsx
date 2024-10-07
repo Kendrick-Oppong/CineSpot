@@ -3,6 +3,7 @@ import { Bai_Jamjuree } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { ThemeProvider } from "@/components/theme";
 
 const bai_Jamjuree = Bai_Jamjuree({
   subsets: ["latin"],
@@ -25,9 +26,18 @@ export default function RootLayout({
       <body
         className={`text-lg ${bai_Jamjuree.className} antialiased`}
       >
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+        >
+          
+
         <Header/>
         <main> {children}</main>
         <Footer/>
+          </ThemeProvider>
       </body>
     </html>
   );
