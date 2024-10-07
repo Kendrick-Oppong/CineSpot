@@ -58,7 +58,7 @@
   }
 
   section {
-    @apply px-5
+    @apply px-5 pt-10 pb-20
   }
 
   span {

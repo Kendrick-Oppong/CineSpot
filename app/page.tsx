@@ -12,9 +12,8 @@ const Home = async () => {
 
   //  const [popularMovies, topRatedMovies, upcomingMovies, nowPlayingMovies];
 
-  const [popularMovies, topRatedMovies, , nowPlayingMovies] = await Promise.all(
-    [popular, top_rated, upcoming, now_playing]
-  );
+  const [popularMovies, topRatedMovies, upcomingMovies, nowPlayingMovies] =
+    await Promise.all([popular, top_rated, upcoming, now_playing]);
 
   return (
     <>
@@ -39,7 +38,7 @@ const Home = async () => {
       </section>
 
       {/* Now Playing */}
-      <section className="bg-secondary">
+      <section className="bg-muted">
         <div className="flex justify-between items-center py-6">
           <div className="font-bold text-2xl">
             <h1>
@@ -57,7 +56,7 @@ const Home = async () => {
         </div>
       </section>
 
-      {/* Now Playing */}
+      {/* Top Rated */}
       <section className="bg-secondary">
         <div className="flex justify-between items-center py-6">
           <div className="font-bold text-2xl">
@@ -73,6 +72,25 @@ const Home = async () => {
         </div>
         <div className="grid grid-cols-auto gap-4">
           <MovieCard movies={topRatedMovies} />
+        </div>
+      </section>
+
+       {/* Upcoming */}
+        <section className="bg-muted">
+        <div className="flex justify-between items-center py-6">
+          <div className="font-bold text-2xl">
+            <h1>
+              Upcoming <span>Movies</span>
+            </h1>
+          </div>
+          <div>
+            <Button className="bg-primary" size="lg">
+              <Link href="/upcomimg">View All</Link>
+            </Button>
+          </div>
+        </div>
+        <div className="grid grid-cols-auto gap-4">
+          <MovieCard movies={upcomingMovies} />
         </div>
       </section>
     </>
