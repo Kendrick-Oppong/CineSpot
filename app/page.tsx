@@ -1,6 +1,16 @@
+import { HeroSection } from "@/components/hero";
+
 export default function Home() {
   return (
-   
-   <h1>hello</h1>
+    <>
+      <HeroSection />
+
+      <section>
+        <div>
+          <div>Popular Movies</div>
+          <div>View All</div>
+        </div>
+      </section>
+    </>
   );
 }

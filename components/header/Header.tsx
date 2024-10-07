@@ -4,7 +4,7 @@ import { Clapperboard, Search } from "lucide-react";
 
 const Header = () => {
   return (
-    <header className="flex justify-between px-5 py-2">
+    <header className="flex justify-between px-5 py-2 bg-gray-400">
       <div className="font-bold text-2xl flex items-center gap-1">
         <Clapperboard className="text-primary" />
         <h1>
