@@ -10,7 +10,6 @@ const Home = async () => {
   const upcoming = getMoviesByCategory({ category: "upcoming" });
   const now_playing = getMoviesByCategory({ category: "now_playing" });
 
-  //  const [popularMovies, topRatedMovies, upcomingMovies, nowPlayingMovies];
 
   const [popularMovies, topRatedMovies, upcomingMovies, nowPlayingMovies] =
     await Promise.all([popular, top_rated, upcoming, now_playing]);
@@ -18,6 +17,7 @@ const Home = async () => {
   return (
     <>
       <HeroSection />
+
       {/* popularMovies */}
       <section className="bg-secondary">
         <div className="flex justify-between items-center py-6">
