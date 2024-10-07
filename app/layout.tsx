@@ -1,16 +1,12 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Bai_Jamjuree } from "next/font/google";
 import "./globals.css";
+import { Header } from "@/components/header";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const bai_Jamjuree = Bai_Jamjuree({
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -26,9 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`text-lg ${bai_Jamjuree.className} antialiased`}
       >
-        {children}
+        <Header/>
+       <main> {children}</main>
       </body>
     </html>
   );
