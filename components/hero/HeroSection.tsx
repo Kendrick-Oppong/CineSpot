@@ -15,7 +15,7 @@ const HeroSection = () => {
 
   return (
     <section
-      className={`relative bg-cover bg-center transition-all duration-1000 ease-in-out`}
+      className={`px-0 relative bg-cover bg-center transition-all duration-1000 ease-in-out`}
       style={{
         backgroundImage: `url(${banners[currentBanner]})`,
       }}

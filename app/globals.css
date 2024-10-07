@@ -57,7 +57,18 @@
     @apply bg-background text-foreground;
   }
 
+  section {
+    @apply px-5
+  }
+
   span {
     @apply text-primary;
+  }
+}
+
+
+@layer utilities {
+  .grid-cols-auto {
+    grid-template-columns: repeat(auto-fit, minmax(10rem,1fr));
   }
 }
