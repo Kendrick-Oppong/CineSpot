@@ -12,7 +12,7 @@ const Home = async () => {
 
   //  const [popularMovies, topRatedMovies, upcomingMovies, nowPlayingMovies];
 
-  const [popularMovies] = await Promise.all([
+  const [popularMovies,,,nowPlayingMovies] = await Promise.all([
     popular,
     top_rated,
     upcoming,
@@ -41,7 +41,24 @@ const Home = async () => {
         </div>
       </section>
 
-     
+      {/* Now Playing */}
+      <section className="bg-secondary">
+        <div className="flex justify-between items-center py-6">
+          <div className="font-bold text-2xl">
+            <h1>
+              Now <span>Playing</span>
+            </h1>
+          </div>
+          <div>
+            <Button className="bg-primary" size="lg">
+              <Link href="/now-playing">View All</Link>
+            </Button>
+          </div>
+        </div>
+        <div className="grid grid-cols-auto gap-4">
+          <MovieCard movies={nowPlayingMovies} />
+        </div>
+      </section>
     </>
   );
 };
