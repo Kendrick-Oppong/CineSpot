@@ -1,12 +1,15 @@
 import { MovieApiResponse } from '@/types'
 import { Star } from "lucide-react";
 import Image from "next/image";
+import Link from 'next/link';
 
 const Card = ({ movie }: { movie: MovieApiResponse }) => {
     const imagePath = "https://image.tmdb.org/t/p/original";
 
   return (
-   <div className="shadow-lg">
+    <div className="shadow-lg">
+      <Link href={`/movies/${movie.title}/${movie.id}`}>
+      
       <Image
         src={`${imagePath}${movie.poster_path}`}
         width={300}
@@ -15,6 +18,7 @@ const Card = ({ movie }: { movie: MovieApiResponse }) => {
         priority
         className="rounded-lg w-full"
       />
+      </Link>
       <div className="px-2 my-3">
         <h1 className="text-primary text-xl font-semibold ">{movie.title}</h1>
         <div className="flex items-center justify-between my-2">
