@@ -56,7 +56,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground flex flex-col min-h-dvh;
   }
 
   section {
@@ -72,5 +72,8 @@
 @layer utilities {
   .grid-cols-auto {
     grid-template-columns: repeat(auto-fit, minmax(12rem,1fr));
+  }
+  .grid-cols-auto-lg {
+    grid-template-columns: repeat(auto-fit, minmax(15rem,1fr));
   }
 }

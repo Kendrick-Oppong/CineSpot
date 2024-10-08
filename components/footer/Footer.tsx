@@ -6,15 +6,18 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="grid grid-cols-2 px-5 py-8 bg-secondary">
+    <footer className="mt-auto grid grid-cols-2 px-5 py-8 bg-secondary">
         <ScrollToTop/>
       <div>
+          <Link href="/">
         <div className="flex items-center gap-1">
+          
           <Clapperboard className="text-primary" />
           <h1 className="text-2xl font-bold">
             Cine<span className="text-primary">Spot</span>
           </h1>
         </div>
+          </Link>
         <p className="mt-2 ">
           Discover the world of cinema with <span>CineSpot</span>
           <br />
