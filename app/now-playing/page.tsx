@@ -2,9 +2,9 @@ import { Card } from "@/components/card";
 import { getMoviesByCategory } from "@/lib/utils";
 
 
-const TopRatedMoviesPage = async () => {
-  const { results: topRatedMovies } = await getMoviesByCategory({
-    category: "top_rated",
+const NowPlayingMoviesPage = async () => {
+  const { results: nowPlayingMovies } = await getMoviesByCategory({
+    category: "now_playing",
   });
 
   return (
@@ -12,11 +12,11 @@ const TopRatedMoviesPage = async () => {
       <section className="bg-muted">
         <div className="font-bold text-2xl mb-4">
           <h1>
-            Top Rated <span>Movies</span>
+            Now Playing <span>Movies</span>
           </h1>
         </div>
         <div className="grid grid-cols-auto lg:grid-cols-auto-lg gap-4">
-          {topRatedMovies.map((movie) => (
+          {nowPlayingMovies.map((movie) => (
             <Card key={movie.id} movie={movie} />
           ))}
         </div>
@@ -25,4 +25,4 @@ const TopRatedMoviesPage = async () => {
   );
 };
 
-export default TopRatedMoviesPage;
+export default NowPlayingMoviesPage;
