@@ -1,6 +1,6 @@
 import { Card } from "@/components/card";
 import { getMoviesByCategory } from "@/lib/utils";
-import React from "react";
+
 
 const UpcomingMoviesPage = async () => {
   const { results: upcomingMovies } = await getMoviesByCategory({
