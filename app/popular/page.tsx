@@ -6,7 +6,6 @@ const PopularMoviesPage = async () => {
   const { results: popularMovies } = await getMoviesByCategory({
     category: "popular",
   });
- throw new Error("oops");
   return (
     <>
       <section className="bg-muted">
