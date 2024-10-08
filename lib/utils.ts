@@ -1,4 +1,4 @@
-import { MovieCategoryApiResponse } from "@/types";
+import { MovieCategoryApiResponse, MovieDetail } from "@/types";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 
@@ -32,7 +32,7 @@ export async function getMovieDetail({
   movie_id,
 }: {
   movie_id: string;
-}): Promise<MovieCategoryApiResponse> {
+}): Promise<MovieDetail> {
   const res = await fetch(
     `https://api.themoviedb.org/3/movie/${movie_id}?api_key=${API_KEY}`
   );

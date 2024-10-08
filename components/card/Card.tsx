@@ -1,15 +1,15 @@
+import { imagePath } from '@/constants';
 import { MovieApiResponse } from '@/types'
 import { Star } from "lucide-react";
 import Image from "next/image";
 import Link from 'next/link';
 
 const Card = ({ movie }: { movie: MovieApiResponse }) => {
-    const imagePath = "https://image.tmdb.org/t/p/original";
+   
 
   return (
     <div className="shadow-lg">
       <Link href={`/movies/${movie.title}/${movie.id}`}>
-      
       <Image
         src={`${imagePath}${movie.poster_path}`}
         width={300}

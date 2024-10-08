@@ -66,6 +66,10 @@
   span {
     @apply text-primary;
   }
+
+  strong {
+   @apply text-primary
+  }
 }
 
 
