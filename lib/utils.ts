@@ -24,3 +24,23 @@ export async function getMoviesByCategory({
 
   return res.json();
 }
+
+
+
+
+export async function getMovieDetail({
+  movie_id,
+}: {
+  movie_id: string;
+}): Promise<MovieCategoryApiResponse> {
+  const res = await fetch(
+    `https://api.themoviedb.org/3/movie/${movie_id}?api_key=${API_KEY}`
+  );
+
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error("Failed to fetch data");
+  }
+
+  return res.json();
+}
