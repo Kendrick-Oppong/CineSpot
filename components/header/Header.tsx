@@ -13,9 +13,9 @@ const Header = () => {
         </h1>
       </div>
 
-      <ul className="flex justify-between gap-4 font-semibold">
+      <ul className="flex items-center justify-between gap-4 font-semibold">
         {navLinks.map((link) => (
-          <Link href={link.href} key={link.title}>
+          <Link href={link.href} key={link.title} >
             <li className="hover:text-primary">{link.title}</li>
           </Link>
         ))}

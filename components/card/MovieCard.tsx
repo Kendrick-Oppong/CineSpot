@@ -14,13 +14,13 @@ const MovieCard = ({ movies }: { movies: MovieCategoryApiResponse }) => {
         height={300}
         alt=""
         priority
-        className="rounded-lg"
+        className="rounded-lg w-full"
       />
       <div className="px-2 my-3">
         <h1 className="text-primary text-xl font-semibold ">{movie.title}</h1>
         <div className="flex items-center justify-between my-2">
           <p>{movie.release_date}</p>
-          <p className="flex items-center">
+          <p className="flex gap-1 items-center">
             <Star className="text-yellow-400"/> {movie.vote_average.toFixed(1)}
           </p>
         </div>

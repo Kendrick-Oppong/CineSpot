@@ -1,4 +1,5 @@
 import { navLinks } from "@/constants";
+import {ScrollToTop} from "."
 import { Clapperboard } from "lucide-react";
 import Link from "next/link";
 import React from "react";
@@ -6,6 +7,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="grid grid-cols-2 px-5 py-8 bg-secondary">
+        <ScrollToTop/>
       <div>
         <div className="flex items-center gap-1">
           <Clapperboard className="text-primary" />
