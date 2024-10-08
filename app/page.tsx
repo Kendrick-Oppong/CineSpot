@@ -85,7 +85,7 @@ const Home = async () => {
           </div>
           <div>
             <Button className="bg-primary" size="lg">
-              <Link href="/upcomimg">View All</Link>
+              <Link href="/upcoming">View All</Link>
             </Button>
           </div>
         </div>

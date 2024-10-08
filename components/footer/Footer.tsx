@@ -21,7 +21,7 @@ const Footer = () => {
         <p className="mt-2 ">
           Discover the world of cinema with <span>CineSpot</span>
           <br />
-          your go-to destination for the latest in movies, reviews, and
+          Your go-to destination for the latest in movies, reviews, and
           entertainment <br />
           Stay updated, stay entertained.
         </p>
