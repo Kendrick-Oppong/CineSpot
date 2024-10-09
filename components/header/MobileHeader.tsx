@@ -40,13 +40,12 @@ const MobileHeader = () => {
           <ul className="font-semibold space-y-2">
             {navLinks.map((link) => (
               <div key={link.title}>
-
               <SheetClose asChild>
                 <Link href={link.href} >
                   <li
                     className={`hover:text-primary ${
                       pathname === link.href
-                        ? "bg-primary rounded-md px-3 py-1"
+                        ? "text-white hover:text-white bg-primary rounded-sm px-3 py-1"
                         : ""
                     }`}
                   >

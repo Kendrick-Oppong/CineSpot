@@ -29,7 +29,7 @@ const Header = () => {
           <Link href={link.href} key={link.title}>
             <li
               className={`hover:text-primary ${
-                pathname === link.href ? "bg-primary rounded-md px-3 py-1" : ""
+                pathname === link.href ? "text-white hover:text-white bg-primary rounded-sm px-3 py-1" : ""
               }`}
             >
               {link.title}
@@ -43,7 +43,7 @@ const Header = () => {
       <div className="flex gap-3 md:gap-6 justify-between items-center">
         <Search
           className="cursor-pointer"
-          onClick={() => setToggleSearch(true)} // Always open the search with one click
+          onClick={() => setToggleSearch(true)}
         />
         <ModeToggle />
         <MobileHeader />
