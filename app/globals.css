@@ -75,13 +75,15 @@
 
 @layer utilities {
   .grid-cols-auto {
-    grid-template-columns: repeat(auto-fit, minmax(12rem,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(12rem,1fr));
   }
   .grid-cols-auto-lg {
-    grid-template-columns: repeat(auto-fit, minmax(15rem,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(15rem,1fr));
   }
 
-
+ .grid-cols-auto-home {
+    grid-template-columns: repeat(auto-fit, minmax(12rem,1fr));
+  }
   
     
 }

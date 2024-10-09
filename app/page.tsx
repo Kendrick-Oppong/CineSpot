@@ -32,7 +32,7 @@ const Home = async () => {
             </Button>
           </div>
         </div>
-        <div className="grid grid-cols-auto gap-4">
+        <div className="grid grid-cols-auto-home gap-4">
           <MovieCard movies={popularMovies} />
         </div>
       </section>
@@ -51,7 +51,7 @@ const Home = async () => {
             </Button>
           </div>
         </div>
-        <div className="grid grid-cols-auto gap-4">
+        <div className="grid grid-cols-auto-home gap-4">
           <MovieCard movies={nowPlayingMovies} />
         </div>
       </section>
@@ -70,7 +70,7 @@ const Home = async () => {
             </Button>
           </div>
         </div>
-        <div className="grid grid-cols-auto gap-4">
+        <div className="grid grid-cols-auto-home gap-4">
           <MovieCard movies={topRatedMovies} />
         </div>
       </section>
@@ -89,7 +89,7 @@ const Home = async () => {
             </Button>
           </div>
         </div>
-        <div className="grid grid-cols-auto gap-4">
+        <div className="grid grid-cols-auto-home gap-4">
           <MovieCard movies={upcomingMovies} />
         </div>
       </section>

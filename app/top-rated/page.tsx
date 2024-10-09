@@ -1,4 +1,5 @@
-import { Card } from "@/components/card";
+
+import { SearchAndFilter } from "@/components/search";
 import { getMoviesByCategory } from "@/lib/utils";
 
 
@@ -15,11 +16,8 @@ const TopRatedMoviesPage = async () => {
             Top Rated <span>Movies</span>
           </h1>
         </div>
-        <div className="grid grid-cols-auto lg:grid-cols-auto-lg gap-4">
-          {topRatedMovies.map((movie) => (
-            <Card key={movie.id} movie={movie} />
-          ))}
-        </div>
+        {/* Client-side component for filtering */}
+        <SearchAndFilter initialMovies={topRatedMovies} />
       </section>
     </>
   );

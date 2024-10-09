@@ -1,6 +1,5 @@
-import { Card } from "@/components/card";
+import { SearchAndFilter } from "@/components/search";
 import { getMoviesByCategory } from "@/lib/utils";
-
 
 const NowPlayingMoviesPage = async () => {
   const { results: nowPlayingMovies } = await getMoviesByCategory({
@@ -15,11 +14,8 @@ const NowPlayingMoviesPage = async () => {
             Now Playing <span>Movies</span>
           </h1>
         </div>
-        <div className="grid grid-cols-auto lg:grid-cols-auto-lg gap-4">
-          {nowPlayingMovies.map((movie) => (
-            <Card key={movie.id} movie={movie} />
-          ))}
-        </div>
+        {/* Client-side component for filtering */}
+        <SearchAndFilter initialMovies={nowPlayingMovies} />
       </section>
     </>
   );

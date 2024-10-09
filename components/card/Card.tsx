@@ -24,7 +24,7 @@ const Card = ({ movie }: { movie: MovieApiResponse }) => {
         <div className="flex items-center justify-between my-2">
           <p>{movie.release_date}</p>
           <p className="flex gap-1 items-center">
-            <Star className="text-yellow-400"/> {movie.vote_average.toFixed(1)}
+            <Star className="text-orange-500"/> {movie.vote_average.toFixed(1)}
           </p>
         </div>
       </div>
