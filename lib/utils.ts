@@ -44,3 +44,23 @@ export async function getMovieDetail({
 
   return res.json();
 }
+
+
+
+export async function getSearchMovies({
+  query,
+}: {
+  query: string;
+}): Promise<MovieDetail> {
+  const res = await fetch(
+    `https://api.themoviedb.org/3/movie?api_key=${API_KEY}&query=${query}`
+  );
+
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error("Failed to fetch data");
+  }
+
+  return res.json();
+}
+
