@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Bai_Jamjuree } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "react-hot-toast";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { ThemeProvider } from "@/components/theme";
@@ -23,21 +24,31 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`text-lg ${bai_Jamjuree.className} antialiased`}
-      >
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            enableSystem
-            disableTransitionOnChange
+      <body className={`text-lg ${bai_Jamjuree.className} antialiased`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
         >
-          
-
-        <Header/>
-        <main> {children}</main>
-        <Footer/>
-          </ThemeProvider>
+          <Toaster
+            position="top-center"
+            reverseOrder={false}
+            gutter={8}
+            toastOptions={{
+              duration: 3000,
+              success: {
+                iconTheme: { primary: "green", secondary: "" },
+              },
+              error: {
+                iconTheme: { primary: "red", secondary: "" },
+              },
+            }}
+          />
+          <Header />
+          <main> {children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
