@@ -33,7 +33,7 @@ const GlobalSearch = ({
         <X
           onClick={() => setToggleSearch(false)}
           size={38}
-          className="ml-auto my-3 text-destructive cursor-pointer"
+          className="ml-auto my-3 rounded-sm border border-destructive text-destructive cursor-pointer"
         />
         <form onSubmit={(e) => handleMovieSearch(e)} className="">
           <Input
