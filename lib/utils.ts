@@ -51,9 +51,9 @@ export async function getSearchMovies({
   query,
 }: {
   query: string;
-}): Promise<MovieDetail> {
+}): Promise<MovieCategoryApiResponse> {
   const res = await fetch(
-    `https://api.themoviedb.org/3/movie?api_key=${API_KEY}&query=${query}`
+    `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${query}`,{cache:"no-cache"}
   );
 
   if (!res.ok) {
