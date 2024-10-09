@@ -5,7 +5,6 @@ const NowPlayingMoviesPage = async () => {
   const { results: nowPlayingMovies } = await getMoviesByCategory({
     category: "now_playing",
   });
-
   return (
     <>
       <section className="bg-muted">

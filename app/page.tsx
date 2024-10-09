@@ -27,7 +27,7 @@ const Home = async () => {
             </h1>
           </div>
           <div>
-            <Button className="bg-primary" size="lg">
+            <Button className="bg-primary" >
               <Link href="/popular">View All</Link>
             </Button>
           </div>
@@ -46,7 +46,7 @@ const Home = async () => {
             </h1>
           </div>
           <div>
-            <Button className="bg-primary" size="lg">
+            <Button className="bg-primary" >
               <Link href="/now-playing">View All</Link>
             </Button>
           </div>
@@ -65,7 +65,7 @@ const Home = async () => {
             </h1>
           </div>
           <div>
-            <Button className="bg-primary" size="lg">
+            <Button className="bg-primary" >
               <Link href="/top-rated">View All</Link>
             </Button>
           </div>
@@ -84,7 +84,7 @@ const Home = async () => {
             </h1>
           </div>
           <div>
-            <Button className="bg-primary" size="lg">
+            <Button className="bg-primary" >
               <Link href="/upcoming">View All</Link>
             </Button>
           </div>

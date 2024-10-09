@@ -15,7 +15,7 @@ const SearchMoviePage = async ({ searchParams }: SearchMovieProps) => {
 
   return (
     <section className="bg-muted">
-      <div className="font-bold text-2xl mb-4">
+      <div className="font-bold text-xl sm:text-2xl mb-4">
         {noResults ? (
           <h1>
             No results found for{" "}

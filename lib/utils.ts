@@ -25,9 +25,6 @@ export async function getMoviesByCategory({
   return res.json();
 }
 
-
-
-
 export async function getMovieDetail({
   movie_id,
 }: {
@@ -45,22 +42,19 @@ export async function getMovieDetail({
   return res.json();
 }
 
-
-
 export async function getSearchMovies({
   query,
 }: {
   query: string;
 }): Promise<MovieCategoryApiResponse> {
   const res = await fetch(
-    `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${query}`,{cache:"no-cache"}
+    `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${query}`,
   );
 
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary
-    throw new Error("Failed to fetch data");
+    console.log({ error: "Failed to fetch data" });
   }
 
   return res.json();
 }
-

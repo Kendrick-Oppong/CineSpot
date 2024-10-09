@@ -13,7 +13,7 @@ const Header = () => {
   const [toggleSearch, setToggleSearch] = useState(false);
 
   return (
-    <header className="flex justify-between px-5 py-2 ">
+    <header className="flex justify-between px-5 py-2">
       <Link href="/">
         <div className="font-bold text-2xl flex items-center gap-1">
           <Clapperboard className="text-primary" />
@@ -23,7 +23,7 @@ const Header = () => {
         </div>
       </Link>
 
-      <ul className="flex items-center justify-between gap-4 font-semibold">
+      <ul className="hidden lg:flex items-center justify-between gap-4 font-semibold">
         {navLinks.map((link) => (
           <Link href={link.href} key={link.title}>
             <li
