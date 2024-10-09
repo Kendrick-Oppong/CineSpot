@@ -7,13 +7,14 @@ import { ModeToggle } from "../theme";
 import { usePathname } from "next/navigation";
 import { GlobalSearch } from "../search";
 import { useState } from "react";
+import { MobileHeader } from ".";
 
 const Header = () => {
   const pathname = usePathname();
   const [toggleSearch, setToggleSearch] = useState(false);
 
   return (
-    <header className="flex justify-between px-5 py-2">
+    <header className="flex justify-between px-3 py-2">
       <Link href="/">
         <div className="font-bold text-2xl flex items-center gap-1">
           <Clapperboard className="text-primary" />
@@ -39,12 +40,13 @@ const Header = () => {
 
       {toggleSearch && <GlobalSearch setToggleSearch={setToggleSearch} />}
 
-      <div className="flex gap-6 justify-between items-center">
+      <div className="flex gap-3 md:gap-6 justify-between items-center">
         <Search
           className="cursor-pointer"
           onClick={() => setToggleSearch(true)} // Always open the search with one click
         />
         <ModeToggle />
+        <MobileHeader />
       </div>
     </header>
   );
