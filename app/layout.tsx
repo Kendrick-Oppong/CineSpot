@@ -37,6 +37,7 @@ export default function RootLayout({
             gutter={8}
             toastOptions={{
               duration: 3000,
+              style: { backgroundColor: "#c4c9e0" },
               success: {
                 iconTheme: { primary: "green", secondary: "" },
               },
