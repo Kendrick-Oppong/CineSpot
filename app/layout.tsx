@@ -5,14 +5,13 @@ import { Toaster } from "react-hot-toast";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { ThemeProvider } from "@/components/theme";
-import ogImage from "./opengraph-image.png";
 
 const bai_Jamjuree = Bai_Jamjuree({
   subsets: ["latin"],
   weight: ["200", "300", "400", "500", "600", "700"],
   display: "swap",
 });
-console.log(ogImage);
+
 export const metadata: Metadata = {
   title: "CineSpot",
   description:

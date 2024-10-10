@@ -13,7 +13,7 @@ const MovieDetail = async ({ params }: MovieIdParams) => {
 
   return (
     <div className="p-5 sm:p-5 bg-muted">
-      <section className="p-0 sm:grid grid-cols-1 sm:grid-cols-2   lg:grid-cols-3 gap-6">
+      <section className="p-0 sm:grid sm:grid-cols-2   lg:grid-cols-3 gap-6">
         {/* Movie Poster */}
         <div className="relative">
           <Image
@@ -29,7 +29,9 @@ const MovieDetail = async ({ params }: MovieIdParams) => {
         {/* Movie Details */}
         <div className="mt-8 md:mt-0 space-y-4 lg:col-span-2">
           {/* Movie Title */}
-          <h1 className="text-3xl sm:text-4xl font-bold text-primary">{movie.title}</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold text-primary">
+            {movie.title}
+          </h1>
 
           {/* Tagline */}
           {movie.tagline && <p className="italic text-lg">{movie.tagline}</p>}
@@ -131,27 +133,12 @@ const MovieDetail = async ({ params }: MovieIdParams) => {
             </div>
           )}
 
-          <div className="sm:hidden">
-            {" "}
-            {/* Homepage */}
-            {movie.homepage && (
-              <div>
-                <strong>Homepage:</strong>{" "}
-                <a
-                  href={movie.homepage}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-destructive"
-                >
-                  {movie.homepage}
-                </a>
-              </div>
-            )}
-            {/* Status */}
+         
+           
             <div>
               <strong>Status:</strong> {movie.status}
             </div>
-          </div>
+         
         </div>
       </section>
     </div>
