@@ -21,11 +21,14 @@ export const metadata: Metadata = {
     title: "CineSpot",
     description:
       "Your go-to destination for the latest in movies, reviews, and entertainment.",
+    url: "https://cine-spot-gules.vercel.app/",
     siteName: "CineSpot",
     images: [
       {
-        url: "https://cine-spot-gules.vercel.app/opengraph-image.png",
-        alt: "CineSpot Open Graph Image",
+        url: "https://cine-spot-gules.vercel.app/opengraph-image.png", 
+        width: 800, 
+        height: 600,
+        alt: "CineSpot logo featuring 'Cine' in black and 'Spot' in blue",
       },
     ],
     type: "website",
