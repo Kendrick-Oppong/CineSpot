@@ -31,6 +31,7 @@ const GlobalSearch = ({
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm z-50">
       <div className="w-full max-w-2xl px-2">
         <X
+          aria-label="close"
           onClick={() => setToggleSearch(false)}
           size={38}
           className="ml-auto my-3 rounded-sm border border-destructive text-destructive cursor-pointer"
