@@ -15,10 +15,10 @@ const bai_Jamjuree = Bai_Jamjuree({
 console.log(ogImage);
 export const metadata: Metadata = {
   title: "CineSpot",
-  metadataBase: new URL("https://cine-spot-gules.vercel.app"),
   description:
-    "Discover the world of cinema with CineSpot, your go-to destination for the latest in movies, reviews, and entertainment.",
- 
+  "Discover the world of cinema with CineSpot, your go-to destination for the latest in movies, reviews, and entertainment.",
+  
+  metadataBase: new URL("https://cine-spot-gules.vercel.app"),
   
 };
 
