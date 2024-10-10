@@ -14,21 +14,21 @@ const bai_Jamjuree = Bai_Jamjuree({
 
 export const metadata: Metadata = {
   title: "CineSpot",
-  metadataBase: new URL("https://cine-spot-gules.vercel.app/"),
+  metadataBase: new URL("https://cine-spot-gules.vercel.app"), 
   description:
     "Discover the world of cinema with CineSpot, your go-to destination for the latest in movies, reviews, and entertainment.",
   openGraph: {
     title: "CineSpot",
     description:
       "Your go-to destination for the latest in movies, reviews, and entertainment.",
-    url: "https://cine-spot-gules.vercel.app/",
+    url: "https://cine-spot-gules.vercel.app/", 
     siteName: "CineSpot",
     images: [
       {
-        url: "https://cine-spot-gules.vercel.app/app/opengraph-image.png",
+        url: "https://cine-spot-gules.vercel.app/opengraph-image.png", 
         width: 800,
         height: 600,
-        alt: "https://cine-spot-gules.vercel.app/",
+        alt: "CineSpot Open Graph Image", 
       },
     ],
     type: "website",
@@ -38,9 +38,15 @@ export const metadata: Metadata = {
     title: "CineSpot",
     description:
       "Your go-to destination for the latest in movies, reviews, and entertainment.",
-    images: "https://cine-spot-gules.vercel.app/twitter-image.png", 
+    images: [
+      {
+        url: "https://cine-spot-gules.vercel.app/twitter-image.png", 
+        alt: "CineSpot Twitter Image", 
+      },
+    ],
   },
 };
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -71,7 +77,7 @@ export default function RootLayout({
             }}
           />
           <Header />
-          <main> {children}</main>
+          <main>{children}</main>
           <Footer />
         </ThemeProvider>
       </body>
