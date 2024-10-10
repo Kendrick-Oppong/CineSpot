@@ -14,21 +14,18 @@ const bai_Jamjuree = Bai_Jamjuree({
 
 export const metadata: Metadata = {
   title: "CineSpot",
-  metadataBase: new URL("https://cine-spot-gules.vercel.app"), 
+  metadataBase: new URL("https://cine-spot-gules.vercel.app"),
   description:
     "Discover the world of cinema with CineSpot, your go-to destination for the latest in movies, reviews, and entertainment.",
   openGraph: {
     title: "CineSpot",
     description:
       "Your go-to destination for the latest in movies, reviews, and entertainment.",
-    url: "https://cine-spot-gules.vercel.app/", 
     siteName: "CineSpot",
     images: [
       {
-        url: "https://cine-spot-gules.vercel.app/opengraph-image.png", 
-        width: 800,
-        height: 600,
-        alt: "CineSpot Open Graph Image", 
+        url: "https://cine-spot-gules.vercel.app/opengraph-image.png",
+        alt: "CineSpot Open Graph Image",
       },
     ],
     type: "website",
@@ -40,8 +37,8 @@ export const metadata: Metadata = {
       "Your go-to destination for the latest in movies, reviews, and entertainment.",
     images: [
       {
-        url: "https://cine-spot-gules.vercel.app/twitter-image.png", 
-        alt: "CineSpot Twitter Image", 
+        url: "https://cine-spot-gules.vercel.app/twitter-image.png",
+        alt: "CineSpot Twitter Image",
       },
     ],
   },
