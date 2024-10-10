@@ -5,6 +5,7 @@ import { Toaster } from "react-hot-toast";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { ThemeProvider } from "@/components/theme";
+import ogImage from "./opengraph-image.jpg";
 
 const bai_Jamjuree = Bai_Jamjuree({
   subsets: ["latin"],
@@ -25,10 +26,9 @@ export const metadata: Metadata = {
     siteName: "CineSpot",
     images: [
       {
-        url: "https://cine-spot-gules.vercel.app/opengraph-image.png", 
-        width: 800, 
-        height: 600,
-        alt: "CineSpot logo featuring 'Cine' in black and 'Spot' in blue",
+        url: ogImage.src,
+        width: ogImage.width,
+        height: ogImage.height,
       },
     ],
     type: "website",
