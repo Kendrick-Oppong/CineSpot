@@ -16,35 +16,6 @@ console.log(ogImage);
 export const metadata: Metadata = {
   title: "CineSpot",
   metadataBase: new URL("https://cine-spot-gules.vercel.app"),
-  description:
-    "Discover the world of cinema with CineSpot, your go-to destination for the latest in movies, reviews, and entertainment.",
-  openGraph: {
-    title: "CineSpot",
-    description:
-      "Your go-to destination for the latest in movies, reviews, and entertainment.",
-    url: "https://cine-spot-gules.vercel.app/",
-    siteName: "CineSpot",
-    images: [
-      {
-        url: ogImage.src,
-        width: ogImage.width,
-        height: ogImage.height,
-      },
-    ],
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "CineSpot",
-    description:
-      "Your go-to destination for the latest in movies, reviews, and entertainment.",
-    images: [
-      {
-        url: "https://cine-spot-gules.vercel.app/twitter-image.png",
-        alt: "CineSpot Twitter Image",
-      },
-    ],
-  },
 };
 
 export default function RootLayout({
