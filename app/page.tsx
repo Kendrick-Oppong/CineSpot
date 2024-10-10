@@ -10,7 +10,6 @@ const Home = async () => {
   const upcoming = getMoviesByCategory({ category: "upcoming" });
   const now_playing = getMoviesByCategory({ category: "now_playing" });
 
-
   const [popularMovies, topRatedMovies, upcomingMovies, nowPlayingMovies] =
     await Promise.all([popular, top_rated, upcoming, now_playing]);
 
@@ -27,7 +26,7 @@ const Home = async () => {
             </h1>
           </div>
           <div>
-            <Button className="bg-primary" >
+            <Button className="bg-primary">
               <Link href="/popular">View All</Link>
             </Button>
           </div>
@@ -46,7 +45,7 @@ const Home = async () => {
             </h1>
           </div>
           <div>
-            <Button className="bg-primary" >
+            <Button className="bg-primary">
               <Link href="/now-playing">View All</Link>
             </Button>
           </div>
@@ -65,7 +64,7 @@ const Home = async () => {
             </h1>
           </div>
           <div>
-            <Button className="bg-primary" >
+            <Button className="bg-primary">
               <Link href="/top-rated">View All</Link>
             </Button>
           </div>
@@ -75,8 +74,8 @@ const Home = async () => {
         </div>
       </section>
 
-       {/* Upcoming */}
-        <section className="bg-muted">
+      {/* Upcoming */}
+      <section className="bg-muted">
         <div className="flex justify-between items-center py-6">
           <div className="font-bold text-2xl">
             <h1>
@@ -84,7 +83,7 @@ const Home = async () => {
             </h1>
           </div>
           <div>
-            <Button className="bg-primary" >
+            <Button className="bg-primary">
               <Link href="/upcoming">View All</Link>
             </Button>
           </div>
